@@ -1,13 +1,13 @@
 from __future__ import unicode_literals
 from django.test.testcases import TestCase
-from django.core.urlresolvers import reverse_lazy as reverse
+from django.core.urlresolvers import reverse
 from core.models import Category
 
 
 class ExportViewMixinTest(TestCase):
-    url = reverse('export-category')
 
     def setUp(self):
+        self.url = reverse('export-category')
         self.cat1 = Category.objects.create(name='Cat 1')
         self.cat2 = Category.objects.create(name='Cat 2')
 
