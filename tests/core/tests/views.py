@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
 from django.test.testcases import TestCase
-from django.core.urlresolvers import reverse
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 from core.models import Category
 
 
