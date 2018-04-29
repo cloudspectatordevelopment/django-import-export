@@ -3,5 +3,5 @@ from import_export import views
 from . import models
 
 
-class CategoryExportView(views.ExportViewMixin, ListView):
+class CategoryExportView(views.ExportViewFormMixin, ListView):
     model = models.Category
